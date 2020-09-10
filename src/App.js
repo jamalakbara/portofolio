@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import "./css/style.css";
 import About from "./components/About";
 import Services from "./components/Services";
+import Portofolio from "./components/Portofolio";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Home />
       <About />
       <Services />
+      <Portofolio />
     </React.Fragment>
   );
 }

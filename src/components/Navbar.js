@@ -26,7 +26,7 @@ function Navbar() {
       href: "#services",
       name: "services",
       className:
-        window.pageYOffset >= 1195 && window.pageYOffset < 2000
+        window.pageYOffset >= 1195 && window.pageYOffset < 1907
           ? "navbar__links--active"
           : "navbar__links",
     },
@@ -34,7 +34,10 @@ function Navbar() {
       key: 4,
       href: "#portofolio",
       name: "portofolio",
-      className: "navbar__links",
+      className:
+        window.pageYOffset >= 1907 && window.pageYOffset < 3000
+          ? "navbar__links--active"
+          : "navbar__links",
     },
     {
       key: 5,
