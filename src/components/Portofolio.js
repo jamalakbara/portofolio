@@ -53,7 +53,7 @@ function Portofolio() {
     containers[0].classList.add("first-porto");
 
     containers.forEach((container) => {
-      const title = container.children[1].children[0].innerHTML;
+      const title = container.children[1].children[1].innerHTML;
       if (title == "HC Wiki") {
         container.style.backgroundColor = "#b4f3eb";
       } else if (title == "Simarak") {

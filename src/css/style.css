@@ -407,24 +407,53 @@ a {
       grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
   grid-gap: 2em;
   margin-top: 20px;
+  position: relative;
 }
 
 .portofolio__container {
+  position: relative;
   width: 100%;
   height: 100%;
   background-color: white;
   display: -ms-grid;
   display: grid;
   place-items: center;
+  overflow: hidden;
 }
 
 .portofolio__hover {
+  position: absolute;
   display: none;
+  background-color: rgba(254, 182, 51, 0.9);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.portofolio__hover-search, .portofolio__hover-title, .portofolio__hover-company {
+  color: white;
 }
 
 .portofolio__image {
   margin: 2em;
   width: 250px;
+}
+
+.porto-anim {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-animation: porto-hover-in 0.3s ease-out;
+          animation: porto-hover-in 0.3s ease-out;
 }
 
 .first-porto {
@@ -504,6 +533,32 @@ a {
     opacity: 1;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes porto-hover-in {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes porto-hover-in {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*# sourceMappingURL=style.css.map */
