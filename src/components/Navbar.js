@@ -68,7 +68,14 @@ function Navbar() {
           boxShadow: "0 5.9px 7.5px rgba(0, 0, 0, 0.291)",
         });
       } else {
-        setBackCol((prevState) => {});
+        setBackCol((prevState) => 
+          ({
+            ...prevState,
+            backgroundColor: "unset",
+            boxShadow: "unset"
+          })
+
+        );
       }
     });
   }, []);

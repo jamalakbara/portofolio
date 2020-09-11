@@ -47,25 +47,20 @@ function Portofolio() {
   ));
 
   useEffect(() => {
-    console.log(window.pageYOffset);
     const containers = document.querySelectorAll(".portofolio__container");
 
     containers[0].classList.add("first-porto");
 
     containers.forEach((container) => {
       const title = container.children[1].children[1].innerHTML;
-      if (title == "HC Wiki") {
+      if (title === "HC Wiki") {
         container.style.backgroundColor = "#b4f3eb";
-      } else if (title == "Simarak") {
+      } else if (title === "Simarak") {
         container.style.backgroundColor = "#4bccf6";
-      } else if (title == "Refresh") {
+      } else if (title === "Refresh") {
         container.style.backgroundColor = "#fedb5d";
       }
     });
-    console.log(
-      document.querySelectorAll(".portofolio__container")[0].children[1]
-        .children[0].innerHTML
-    );
   });
 
   return (

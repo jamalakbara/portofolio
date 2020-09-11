@@ -20,7 +20,7 @@ function CardServices(props) {
     <div className="services__card" style={style}>
       <div className="services__card-container">
         <div className="services__card-header">
-          {title == "web development" ? <WebIcon /> : <DeveloperModeIcon />}
+          {title === "web development" ? <WebIcon /> : <DeveloperModeIcon />}
         </div>
         <h1 className="services__card-title">{title}</h1>
       </div>

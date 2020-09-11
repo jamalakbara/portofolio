@@ -4,7 +4,7 @@ function Button(props) {
   const { className, href, name } = props;
 
   useEffect(() => {
-    if (name == "download resume")
+    if (name === "download resume")
       document.querySelector(".about__cv").setAttribute("download", "");
   });
 

@@ -1,27 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchIcon from "@material-ui/icons/Search";
 
 function Project(props) {
   const { img, title, company } = props;
+  const [classContainer, setClassContainer] = useState("portofolio__hover");
 
-  const handleOver = (e) => {
-    const hover = e.target.children[1];
-    hover.classList.toggle("porto-anim");
+  const handleMouseEnter = (e) => {
+    setClassContainer("portofolio__hover porto-anim");
   };
 
-  const handleLeave = (e) => {
-    const hover = e.target.children[1];
-    hover.classList.toggle("porto-anim");
+  const handleMouseLeave = (e) => {
+    setClassContainer("portofolio__hover");
   };
 
   return (
     <div
       className="portofolio__container"
-      onMouseOver={handleOver}
-      onMouseOut={handleLeave}
+      onMouseLeave={handleMouseLeave}
+      onMouseEnter={handleMouseEnter}
     >
-      <img src={img} className="portofolio__image" />
-      <div className="portofolio__hover">
+      <img src={img} className="portofolio__image" alt="" />
+      <div className={classContainer}>
         <a href={`#${title}`} className="portofolio__hover-search">
           <SearchIcon />
         </a>
