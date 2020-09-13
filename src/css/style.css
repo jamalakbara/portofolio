@@ -114,6 +114,7 @@ a {
 }
 
 .navbar__links, .navbar__links--active, .navbar__links:hover {
+  cursor: pointer;
   color: white;
   text-transform: capitalize;
   margin: 0 5px;

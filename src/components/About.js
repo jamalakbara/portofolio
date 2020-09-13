@@ -13,7 +13,7 @@ function About() {
       id: 2,
       name: "download resume",
       className: "about__cv",
-      href: "/i/docs/CV.pdf",
+      href: "/docs/CV.pdf",
     },
   ];
 
