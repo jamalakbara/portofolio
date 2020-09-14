@@ -21,10 +21,20 @@ function Project(props) {
     >
       <img src={img} className="portofolio__image" alt="" />
       <div className={classContainer}>
-        <a href={projs} target="_blank" className="portofolio__hover-search">
+        <a
+          href={projs}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="portofolio__hover-search"
+        >
           <SearchIcon />
         </a>
-        <a href={projs} target="_blank" className="portofolio__hover-title">
+        <a
+          href={projs}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="portofolio__hover-title"
+        >
           {title}
         </a>
         <p className="portofolio__hover-company">{company}</p>

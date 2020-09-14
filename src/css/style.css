@@ -19,7 +19,7 @@ a {
   text-decoration: none;
 }
 
-.navbar, .introduction, .about, .services, .portofolio {
+.navbar, .introduction, .about, .services, .portofolio, .work {
   padding: 0 5em;
 }
 
@@ -30,7 +30,7 @@ a {
   display: grid;
 }
 
-.about__title, .services .services__label, .portofolio .portofolio__label {
+.about__title, .services .services__label, .portofolio .portofolio__label, .work .work__label {
   font-size: 30pt;
   text-transform: capitalize;
   color: white;
@@ -447,6 +447,125 @@ a {
 .portofolio__image {
   margin: 2em;
   width: 250px;
+}
+
+.work {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  min-height: calc(100vh - 15vh);
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.work .work__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.work .work__label::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 60px;
+  background-color: #feb633;
+  margin: 20px auto;
+}
+
+.work .work__subtitle {
+  width: 75%;
+  text-align: center;
+  color: #bfbfbf;
+}
+
+.work__main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  -ms-grid-rows: (minmax(300px, 1fr))[2];
+      grid-template-rows: repeat(2, minmax(300px, 1fr));
+  margin-top: 20px;
+}
+
+.work__detail {
+  padding: 3em;
+  border: 1px solid #666666;
+  background-color: #404040;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.work__detail:hover {
+  background-color: #feb633;
+  border-color: #feb633;
+}
+
+.work__detail:hover .work__desc,
+.work__detail:hover .work__title,
+.work__detail:hover .work__date,
+.work__detail:hover .work__company {
+  color: #1a1a1a;
+}
+
+.work__detail:nth-child(2) {
+  border-right: none;
+  border-left: none;
+}
+
+.work__detail:last-child {
+  border-top: none;
+}
+
+.work__date, .work__title, .work__company, .work__desc {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.work__date, .work__company {
+  color: #999999;
+}
+
+.work__date {
+  text-transform: uppercase;
+}
+
+.work__title {
+  font-size: 16pt;
+  color: white;
+  font-weight: 500;
+}
+
+.work__desc {
+  margin-top: 1em;
+  color: #bfbfbf;
+}
+
+.last-work {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
 }
 
 .porto-anim {

@@ -57,7 +57,7 @@ function Navbar() {
         document.getElementById("portofolio").offsetTop -
         document.querySelector(".navbar").offsetHeight,
     });
-  });
+  }, []);
 
   const navLinksItem = [
     {
@@ -93,7 +93,7 @@ function Navbar() {
       yHeight: portofolioHeight,
       name: "portofolio",
       className:
-        window.pageYOffset >= portofolioHeight && window.pageYOffset < 3000
+        window.pageYOffset >= portofolioHeight && window.pageYOffset < 4000
           ? "navbar__links--active"
           : "navbar__links",
     },

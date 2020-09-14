@@ -389,6 +389,71 @@ a {
   }
 }
 
+.work {
+  @include section-biasa("work");
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(2, minmax(300px, 1fr));
+    margin-top: 20px;
+  }
+  &__detail {
+    padding: 3em;
+    border: 1px solid lighten($ternary, 15%);
+    background-color: $ternary;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $oren;
+      border-color: $oren;
+    }
+    &:hover .work__desc,
+    &:hover .work__title,
+    &:hover .work__date,
+    &:hover .work__company {
+      color: $primary;
+    }
+    &:nth-child(2) {
+      border-right: none;
+      border-left: none;
+    }
+    &:last-child {
+      border-top: none;
+    }
+  }
+  &__date,
+  &__title,
+  &__company,
+  &__desc {
+    transition: all 0.3s ease;
+  }
+  &__date,
+  &__company {
+    color: darken(white, 40%);
+  }
+
+  &__date {
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 16pt;
+    color: white;
+    font-weight: 500;
+  }
+
+  &__desc {
+    margin-top: 1em;
+    color: darken(white, 25%);
+  }
+}
+
+.last-work {
+  grid-column: 1 / 4;
+}
+
 .porto-anim {
   display: flex !important;
   animation: porto-hover-in 0.3s ease-out;
