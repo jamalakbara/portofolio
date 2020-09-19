@@ -3,6 +3,7 @@ export const initialState = {
   aboutHeight: null,
   servicesHeight: null,
   portofolioHeight: null,
+  contactHeight: null,
 };
 
 export const actionTypes = {
@@ -10,6 +11,7 @@ export const actionTypes = {
   SET_ABOUT_HEIGHT: "SET_ABOUT_HEIGHT",
   SET_SERVICES_HEIGHT: "SET_SERVICES_HEIGHT",
   SET_PORTOFOLIO_HEIGHT: "SET_PORTOFOLIO_HEIGHT",
+  SET_CONTACT_HEIGHT: "SET_CONTACT_HEIGHT",
 };
 
 const reducer = (state, action) => {
@@ -33,6 +35,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         portofolioHeight: action.height,
+      };
+    case actionTypes.SET_CONTACT_HEIGHT:
+      return {
+        ...state,
+        contactHeight: action.height,
       };
     default:
       return state;

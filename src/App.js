@@ -6,6 +6,9 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Portofolio from "./components/Portofolio";
 import Works from "./components/Works";
+import Hire from "./components/Hire";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
       <Services />
       <Portofolio />
       <Works />
+      <Hire />
+      <Contact />
+      <Footer />
     </React.Fragment>
   );
 }

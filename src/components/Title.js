@@ -6,7 +6,7 @@ function Title(props) {
   return (
     <div className={parentClass}>
       <h1 className={labelClass}>{label}</h1>
-      <p className={subtitleClass}>{subtitle}</p>
+      {subtitle && <p className={subtitleClass}>{subtitle}</p>}
     </div>
   );
 }

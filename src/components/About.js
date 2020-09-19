@@ -6,13 +6,13 @@ function About() {
     {
       id: 1,
       name: "view works",
-      className: "about__works",
+      className: "button",
       href: "#",
     },
     {
       id: 2,
       name: "download resume",
-      className: "about__cv",
+      className: "about__cv button-reverse",
       href: "/docs/CV.pdf",
     },
   ];

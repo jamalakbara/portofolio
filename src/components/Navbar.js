@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from "react";
 import NavLink from "./NavLink";
-import { actionTypes } from "./reducer";
-import { useStateValue } from "./StateProvider";
+import { actionTypes } from "./misc/reducer";
+import { useStateValue } from "./misc/StateProvider";
+import Logo from "./Logo";
 
 function Navbar() {
+  const [backCol, setBackCol] = useState({ transition: "all .2s ease-in" });
+
   const [
-    { homeHeight, aboutHeight, servicesHeight, portofolioHeight },
+    {
+      homeHeight,
+      aboutHeight,
+      servicesHeight,
+      portofolioHeight,
+      contactHeight,
+    },
     dispatch,
   ] = useStateValue();
 
@@ -57,7 +66,15 @@ function Navbar() {
         document.getElementById("portofolio").offsetTop -
         document.querySelector(".navbar").offsetHeight,
     });
-  }, []);
+
+    // set scroll contact value
+    dispatch({
+      type: actionTypes.SET_CONTACT_HEIGHT,
+      height:
+        document.getElementById("hire").offsetTop -
+        document.querySelector(".navbar").offsetHeight,
+    });
+  }, [dispatch]);
 
   const navLinksItem = [
     {
@@ -93,15 +110,19 @@ function Navbar() {
       yHeight: portofolioHeight,
       name: "portofolio",
       className:
-        window.pageYOffset >= portofolioHeight && window.pageYOffset < 4000
+        window.pageYOffset >= portofolioHeight &&
+        window.pageYOffset < contactHeight
           ? "navbar__links--active"
           : "navbar__links",
     },
     {
       key: 5,
-      yHeight: 646,
+      yHeight: contactHeight,
       name: "contact",
-      className: "navbar__links",
+      className:
+        window.pageYOffset >= contactHeight
+          ? "navbar__links--active"
+          : "navbar__links",
     },
   ];
 
@@ -115,13 +136,9 @@ function Navbar() {
     />
   ));
 
-  const [backCol, setBackCol] = useState({ transition: "all .2s ease-in" });
-
   return (
     <nav className="navbar" style={backCol}>
-      <div className="navbar__logo">
-        <a href="#home">jaa.</a>
-      </div>
+      <Logo />
       <div className="navbar__menu">{Links}</div>
     </nav>
   );

@@ -9,11 +9,7 @@ function Home() {
         <p className="introduction__text">
           young web developer and soon to be mobile developer also
         </p>
-        <Button
-          name={"hire me"}
-          className={"introduction__button"}
-          href={"#"}
-        />
+        <Button name={"hire me"} className={"button"} href={"#"} />
       </div>
       <div className="introduction__image">
         <img src="" className="introdiction__me" alt="" />

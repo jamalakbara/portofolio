@@ -4,8 +4,8 @@ function Experiences({ date, title, company, desc, href }) {
   return (
     <a
       href={href}
-      target={href !== "#" && "_blank"}
-      rel="noopener noreferrer"
+      target={href !== "#" ? "_blank" : undefined}
+      rel={href !== "#" ? "noopener noreferrer" : undefined}
       className="work__detail"
     >
       <div className="work__top">
